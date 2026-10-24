@@ -1,10 +1,12 @@
-> **Client concept target:** https://jay-rtl.github.io/mibank_2/ ? see [NEW_REPO_DEPLOYMENT.md](NEW_REPO_DEPLOYMENT.md). Earlier local-only notes and audits below describe the review stage before the user authorized publishing to mibank_2.
-
-> **Local client-concept preview (not deployed):** Open http://127.0.0.1:4321/ while the preview server is running. The new light/yellow concept, simplified intro and retained scroll animations are documented in [CLIENT_CONCEPT_AUDIT.md](CLIENT_CONCEPT_AUDIT.md). Current concept changes are local only. To restart: set `ASTRO_TELEMETRY_DISABLED=1` and `DEPLOY_BASE=/`, run `npm run build`, then `npm run preview`.
+> **Live client concept:** https://jay-rtl.github.io/mibank_2/
+>
+> Deployment results: [NEW_REPO_DEPLOYMENT.md](NEW_REPO_DEPLOYMENT.md). Earlier audit documents retain the history of local review and the previous design. The original mibank repository was not updated.
+>
+> Local preview: set `ASTRO_TELEMETRY_DISABLED=1` and `DEPLOY_BASE=/`, then run `npm ci`, `npm run build` and `npm run preview`. Open http://127.0.0.1:4321/.
 
 # MiBank public website redesign
 
-Non-production, local informational preview. No login, transaction, application submission, payment, customer storage, analytics or tracking is implemented. The original website is not modified.
+Non-production informational preview. No login, transaction, application submission, payment, customer storage, analytics or tracking is implemented. The original website is not modified.
 
 ## Run
 
@@ -31,7 +33,7 @@ Preview URL: http://127.0.0.1:4321. Static output is in `dist/`. A static host m
 - Shared semantic header, keyboard dropdowns, mobile menu and footer in `src/layouts/Layout.astro`.
 - Original response snapshots: `source/pages/`; migrated body content: `src/data/pages.json`; route mapping: `src/data/routes.json`.
 - `scripts/crawl.mjs`, `scripts/assets.mjs` and `scripts/migrate.mjs` capture source content, download original files and rebuild local content. Re-crawling fetches the current source and may change the audited baseline: review generated diffs before replacing content.
-- Original assets and WebP derivatives are local. Manrope is self-hosted under its included OFL license. Four videos retain original bytes and use `preload="none"`; the two largest are about 81 MB and 166 MB. A future streaming/compression pass needs client review.
+- Original assets and responsive AVIF/WebP derivatives are local. Manrope is self-hosted under its included OFL license. Four optimized, full-length videos use preload="none"; original large video backups are excluded from publication.
 - GSAP progressively enhances entrance/reveal movement; content is visible without JavaScript. Reduced motion bypasses animation. Native details menus work without JavaScript; mobile expanded navigation is enhanced with JavaScript.
 - The location filter operates entirely in the browser. The original map's labels and coordinates are retained in `src/data/locations.json`; no map service or geolocation permissions are used.
 
