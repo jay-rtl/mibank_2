@@ -174,11 +174,11 @@
       "pass": true
     },
     {
-      "name": "Published route /products",
+      "name": "Published route /products/fisheries-loan",
       "pass": true
     },
     {
-      "name": "Published route /products/fisheries-loan",
+      "name": "Published route /products",
       "pass": true
     },
     {
@@ -190,11 +190,11 @@
       "pass": true
     },
     {
-      "name": "Published route /products/school-fee-loan",
+      "name": "Published route /products/sola-pawa-loans",
       "pass": true
     },
     {
-      "name": "Published route /products/sola-pawa-loans",
+      "name": "Published route /products/school-fee-loan",
       "pass": true
     },
     {
@@ -206,6 +206,10 @@
       "pass": true
     },
     {
+      "name": "Published route /products/term-deposits",
+      "pass": true
+    },
+    {
       "name": "Published route /products/mipikinini",
       "pass": true
     },
@@ -214,19 +218,7 @@
       "pass": true
     },
     {
-      "name": "Published route /products/term-deposits",
-      "pass": true
-    },
-    {
       "name": "Published route /about/annual-reports",
-      "pass": true
-    },
-    {
-      "name": "Published route /about/executive-management",
-      "pass": true
-    },
-    {
-      "name": "Published route /products/vehicle-loan",
       "pass": true
     },
     {
@@ -234,11 +226,19 @@
       "pass": true
     },
     {
-      "name": "Published route /media/hibiscus",
+      "name": "Published route /products/vehicle-loan",
+      "pass": true
+    },
+    {
+      "name": "Published route /about/executive-management",
       "pass": true
     },
     {
       "name": "Published route /about/locations",
+      "pass": true
+    },
+    {
+      "name": "Published route /media/hibiscus",
       "pass": true
     },
     {
@@ -266,11 +266,11 @@
       "pass": true
     },
     {
-      "name": "Published route /media",
+      "name": "Published route /media/micash-agent",
       "pass": true
     },
     {
-      "name": "Published route /media/micash-agent",
+      "name": "Published route /media",
       "pass": true
     },
     {
@@ -286,11 +286,11 @@
       "pass": true
     },
     {
-      "name": "Published route /about/annual-reports/2014",
+      "name": "Published route /about/annual-reports/2015",
       "pass": true
     },
     {
-      "name": "Published route /about/annual-reports/2015",
+      "name": "Published route /about/annual-reports/2014",
       "pass": true
     },
     {
@@ -298,19 +298,19 @@
       "pass": true
     },
     {
-      "name": "Published route /about/annual-reports/2013",
-      "pass": true
-    },
-    {
-      "name": "Published route /about/annual-reports/2011",
-      "pass": true
-    },
-    {
       "name": "Published route /about/annual-reports/2016",
       "pass": true
     },
     {
+      "name": "Published route /about/annual-reports/2013",
+      "pass": true
+    },
+    {
       "name": "Published route /about/annual-reports/2018",
+      "pass": true
+    },
+    {
+      "name": "Published route /about/annual-reports/2011",
       "pass": true
     },
     {

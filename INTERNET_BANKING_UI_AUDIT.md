@@ -1,3 +1,5 @@
+> Publication update: this UI is now deployed at https://jay-rtl.github.io/mibank_2/internet-banking/. Current live results are in [INTERNET_BANKING_DEPLOYMENT.md](INTERNET_BANKING_DEPLOYMENT.md). The report below records the earlier local review stage.
+
 ﻿# Internet Banking login UI - local review
 
 ## Implemented
