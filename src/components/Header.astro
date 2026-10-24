@@ -15,5 +15,5 @@ const personal=products.filter(([name])=>!['Business Loan','Fisheries Loan','Far
  <a href="/#milife">MiLife</a>
  <details class="nav-dropdown"><summary class:list={{active:current.startsWith('/about')}}>About us <Icon name="chevron" size={14}/></summary><div class="dropdown about-dropdown">{about.map(([name,url])=><a href={url} aria-current={current===url?'page':undefined}>{name}</a>)}<a href="/media">News &amp; updates</a></div></details>
  <a href="/about/contact">Help &amp; contact</a>
- <a href="/products" class="nav-contact">Get started <Icon size={17}/></a>
+ <a href="/internet-banking" class="nav-contact" aria-current={current==='/internet-banking'?'page':undefined}><Icon name="lock" size={16}/> Internet Banking</a>
 </nav><button type="button" class="header-search" id="open-search" aria-label="Search MiBank" aria-haspopup="dialog" aria-controls="site-search"><Icon name="search" size={20}/></button></div></header>

@@ -1,7 +1,7 @@
 ---
 import {pages} from '../lib/content';
 import Icon from './Icon.astro';
-const index=pages.map(page=>({title:page.route==='/'?'MiBank home':page.title,route:page.route,description:page.description.slice(0,140)}));
+const index=pages.map(page=>({title:page.route==='/'?'MiBank home':page.title,route:page.route,description:page.description.slice(0,140)})).concat([{title:"Internet Banking - UI Preview",route:"/internet-banking",description:"Internet Banking login design with sample details only. No live account access."}]);
 ---
 <dialog class="site-search" id="site-search" aria-labelledby="site-search-title"><div class="site-search-top"><h2 id="site-search-title">How can we help?</h2><button type="button" data-search-close aria-label="Close search"><Icon name="close"/></button></div><label for="site-search-input">Search products, services and information</label><div class="site-search-field"><Icon name="search"/><input id="site-search-input" type="search" placeholder="Try MiCash, loans or locations" autocomplete="off"/></div><p class="site-search-count" role="status" aria-live="polite"></p><ul class="site-search-results"></ul></dialog>
 <script type="application/json" id="site-search-data" set:html={JSON.stringify(index).replace(/</g,'\\u003c')}/>

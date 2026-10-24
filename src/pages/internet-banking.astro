@@ -1,0 +1,42 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/internet-banking.css';
+---
+<Layout title="Internet Banking - UI Preview" description="Explore the MiBank Internet Banking login design. Demonstration interface only, with sample details and no live banking access.">
+ <section class="banking-preview">
+  <div class="shell banking-shell">
+   <nav class="banking-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Internet Banking</span></nav>
+   <div class="banking-card">
+    <div class="banking-story"><img src="/assets/concept/community-hero-960.avif" width="960" height="540" alt=""/><div class="banking-story-copy"><span class="banking-eyebrow">Grow with us</span><h2>Banking for a<br/>stronger tomorrow.</h2><p>A fresh look at everyday banking.<br/>Made for Papua New Guinea.</p><a href="/products">Explore MiBank products <Icon size={17}/></a></div></div>
+    <div class="banking-panel">
+     <div class="banking-label"><span class="banking-lock"><Icon name="lock" size={21}/></span><span>Internet Banking</span><span class="banking-demo-badge">UI preview</span></div>
+     <h1>Welcome back.</h1><p class="banking-intro">A little closer to your everyday banking.</p>
+     <div class="banking-demo-note" id="banking-demo-note"><strong>Try the design with sample details.</strong><p>This is a demonstration only. Real banking sign-in is unavailable. Please do not use real credentials.</p></div>
+     <div class="banking-fields" role="group" aria-label="Sample login details" aria-describedby="banking-demo-note">
+      <label for="banking-username">Username<span class="banking-field"><Icon name="user" size={19}/><input id="banking-username" type="text" value="demo.customer" readonly autocomplete="off" spellcheck="false" aria-describedby="banking-sample-hint"/></span></label>
+      <label for="banking-password">Password<span class="banking-field"><Icon name="lock" size={19}/><input id="banking-password" type="password" value="PreviewOnly123" readonly autocomplete="off" aria-describedby="banking-sample-hint"/><button type="button" id="banking-password-toggle" aria-label="Show sample password" aria-pressed="false" disabled><Icon name="eye" size={20}/></button></span></label>
+      <p class="banking-sample-hint" id="banking-sample-hint">Sample details are fixed for this preview.</p>
+      <button type="button" class="banking-login" id="banking-login" disabled>Log in <Icon size={18}/></button>
+      <div class="banking-status" id="banking-status" role="status" aria-live="polite" hidden><strong>You're viewing a design preview.</strong><p>No sign-in request was sent. Live account access is not connected.</p></div>
+     </div>
+     <noscript><p class="banking-no-script">This is a static login preview. No sign-in request can be submitted.</p></noscript>
+     <a class="banking-help" href="/about/contact">Need help? Contact MiBank <Icon size={15}/></a>
+     <div class="banking-panel-end"><span>Simple hassle-free banking for everyone.</span><a href="/">Back to MiBank <Icon size={14}/></a></div>
+    </div>
+   </div>
+  </div>
+ </section>
+</Layout>
+<script>
+const password=document.querySelector<HTMLInputElement>('#banking-password');
+const toggle=document.querySelector<HTMLButtonElement>('#banking-password-toggle');
+const login=document.querySelector<HTMLButtonElement>('#banking-login');
+const status=document.querySelector<HTMLElement>('#banking-status');
+if(password&&toggle&&login&&status){
+ toggle.disabled=false;login.disabled=false;
+ toggle.addEventListener('click',()=>{const show=password.type==='password';password.type=show?'text':'password';toggle.setAttribute('aria-label',show?'Hide sample password':'Show sample password');toggle.setAttribute('aria-pressed',String(show));});
+ // Local presentation only. No form, requests, credential handling or persistence.
+ login.addEventListener('click',()=>{status.hidden=false;});
+}
+</script>

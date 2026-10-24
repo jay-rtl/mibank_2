@@ -1,3 +1,5 @@
+> **Internet Banking UI:** https://jay-rtl.github.io/mibank_2/internet-banking/ - sample details only, no real authentication. Deployment status and verification: [INTERNET_BANKING_DEPLOYMENT.md](INTERNET_BANKING_DEPLOYMENT.md).
+
 > **Live client concept:** https://jay-rtl.github.io/mibank_2/
 >
 > Deployment results: [NEW_REPO_DEPLOYMENT.md](NEW_REPO_DEPLOYMENT.md). Earlier audit documents retain the history of local review and the previous design. The original mibank repository was not updated.

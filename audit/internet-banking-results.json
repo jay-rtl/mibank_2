@@ -1,0 +1,356 @@
+{
+  "checks": [
+    {
+      "name": "No overflow 1440",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 1440",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 1440",
+      "pass": true
+    },
+    {
+      "name": "No submit form 1440",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 1440",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 1440",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 1440",
+      "pass": true
+    },
+    {
+      "name": "No network on login 1440",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 1440",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 1440",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 1440",
+      "pass": true
+    },
+    {
+      "name": "No overflow 1200",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 1200",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 1200",
+      "pass": true
+    },
+    {
+      "name": "No submit form 1200",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 1200",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 1200",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 1200",
+      "pass": true
+    },
+    {
+      "name": "No network on login 1200",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 1200",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 1200",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 1200",
+      "pass": true
+    },
+    {
+      "name": "No overflow 1101",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 1101",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 1101",
+      "pass": true
+    },
+    {
+      "name": "No submit form 1101",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 1101",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 1101",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 1101",
+      "pass": true
+    },
+    {
+      "name": "No network on login 1101",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 1101",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 1101",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 1101",
+      "pass": true
+    },
+    {
+      "name": "No overflow 900",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 900",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 900",
+      "pass": true
+    },
+    {
+      "name": "No submit form 900",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 900",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 900",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 900",
+      "pass": true
+    },
+    {
+      "name": "No network on login 900",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 900",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 900",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 900",
+      "pass": true
+    },
+    {
+      "name": "No overflow 768",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 768",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 768",
+      "pass": true
+    },
+    {
+      "name": "No submit form 768",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 768",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 768",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 768",
+      "pass": true
+    },
+    {
+      "name": "No network on login 768",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 768",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 768",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 768",
+      "pass": true
+    },
+    {
+      "name": "No overflow 390",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 390",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 390",
+      "pass": true
+    },
+    {
+      "name": "No submit form 390",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 390",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 390",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 390",
+      "pass": true
+    },
+    {
+      "name": "No network on login 390",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 390",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 390",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 390",
+      "pass": true
+    },
+    {
+      "name": "No overflow 320",
+      "pass": true
+    },
+    {
+      "name": "Preview clearly labelled 320",
+      "pass": true
+    },
+    {
+      "name": "Fields read only 320",
+      "pass": true
+    },
+    {
+      "name": "No submit form 320",
+      "pass": true
+    },
+    {
+      "name": "Password reveal 320",
+      "pass": true
+    },
+    {
+      "name": "Password conceal 320",
+      "pass": true
+    },
+    {
+      "name": "UI-only login message 320",
+      "pass": true
+    },
+    {
+      "name": "No network on login 320",
+      "pass": true
+    },
+    {
+      "name": "No credential storage 320",
+      "pass": true
+    },
+    {
+      "name": "URL unchanged 320",
+      "pass": true
+    },
+    {
+      "name": "Header navigation 320",
+      "pass": true
+    },
+    {
+      "name": "Keyboard password toggle",
+      "pass": true
+    },
+    {
+      "name": "Keyboard preview login",
+      "pass": true
+    },
+    {
+      "name": "Login preview metadata",
+      "pass": true
+    },
+    {
+      "name": "Search finds login preview",
+      "pass": true
+    },
+    {
+      "name": "No-JS sign-in cannot submit",
+      "pass": true
+    },
+    {
+      "name": "No-JS explanation visible",
+      "pass": true
+    }
+  ],
+  "axe": [
+    {
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "width": 768,
+      "violations": []
+    },
+    {
+      "width": 390,
+      "violations": []
+    },
+    {
+      "width": 320,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "failedResponses": []
+}
