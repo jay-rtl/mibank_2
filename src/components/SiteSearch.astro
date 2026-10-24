@@ -1,0 +1,17 @@
+---
+import {pages} from '../lib/content';
+import Icon from './Icon.astro';
+const index=pages.map(page=>({title:page.route==='/'?'MiBank home':page.title,route:page.route,description:page.description.slice(0,140)}));
+---
+<dialog class="site-search" id="site-search" aria-labelledby="site-search-title"><div class="site-search-top"><h2 id="site-search-title">How can we help?</h2><button type="button" data-search-close aria-label="Close search"><Icon name="close"/></button></div><label for="site-search-input">Search products, services and information</label><div class="site-search-field"><Icon name="search"/><input id="site-search-input" type="search" placeholder="Try MiCash, loans or locations" autocomplete="off"/></div><p class="site-search-count" role="status" aria-live="polite"></p><ul class="site-search-results"></ul></dialog>
+<script type="application/json" id="site-search-data" set:html={JSON.stringify(index).replace(/</g,'\\u003c')}/>
+<script>
+const dialog=document.querySelector<HTMLDialogElement>('#site-search');const opener=document.querySelector<HTMLButtonElement>('#open-search');const input=document.querySelector<HTMLInputElement>('#site-search-input');
+if(dialog&&opener&&input){
+ const data=JSON.parse(document.querySelector('#site-search-data')!.textContent!) as {title:string;route:string;description:string}[];
+ const base=import.meta.env.BASE_URL.replace(/\/$/,'');const list=dialog.querySelector('.site-search-results')!;
+ const render=()=>{const query=input.value.toLowerCase().trim();const results=data.filter(item=>!query||(item.title+' '+item.description).toLowerCase().includes(query)).slice(0,10);list.replaceChildren();for(const item of results){const li=document.createElement('li');const link=document.createElement('a');link.href=base+(item.route==='/'?'/':item.route+'/');const title=document.createElement('strong');title.textContent=item.title;const description=document.createElement('span');description.textContent=item.description;link.append(title,description);li.append(link);list.append(li);}dialog.querySelector('.site-search-count')!.textContent=results.length?`${results.length} ${query?'matching pages':'pages to explore'}`:'No matching pages. Try another product or service.';};
+ dialog.addEventListener('keydown',event=>{if(event.key==='Escape'){event.preventDefault();event.stopPropagation();dialog.close();}});
+ opener.addEventListener('click',()=>{dialog.showModal();input.focus();render();});dialog.querySelector('[data-search-close]')?.addEventListener('click',()=>dialog.close());input.addEventListener('input',render);input.addEventListener('keydown',event=>{if(event.key==='ArrowDown'){event.preventDefault();list.querySelector('a')?.focus();}});
+}
+</script>

@@ -1,0 +1,63 @@
+{
+  "checks": [
+    {
+      "name": "All 37 routes render without overflow 1440",
+      "pass": true
+    },
+    {
+      "name": "All 37 routes render without overflow 390",
+      "pass": true
+    },
+    {
+      "name": "Product brochures initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "Original product brochures accessible on demand",
+      "pass": true
+    },
+    {
+      "name": "Business nav active",
+      "pass": true
+    },
+    {
+      "name": "Business dropdown keyboard opens",
+      "pass": true
+    },
+    {
+      "name": "Dropdown Escape restores focus",
+      "pass": true
+    },
+    {
+      "name": "Search dialog keeps keyboard focus inside",
+      "pass": true
+    },
+    {
+      "name": "Search Escape restores opener focus",
+      "pass": true
+    },
+    {
+      "name": "Video metadata hibiscus",
+      "pass": true
+    },
+    {
+      "name": "Video muted playback",
+      "pass": true
+    },
+    {
+      "name": "Video metadata ulip",
+      "pass": true
+    },
+    {
+      "name": "Video metadata micash-agent",
+      "pass": true
+    },
+    {
+      "name": "Video metadata michoice",
+      "pass": true
+    }
+  ],
+  "overflow": [],
+  "errors": [],
+  "axe": []
+}

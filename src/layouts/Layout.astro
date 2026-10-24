@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import '../styles/theme.css';
+import WelcomeIntro from '../components/WelcomeIntro.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SiteSearch from '../components/SiteSearch.astro';
+const {title,description='MiBank public informational website redesign. Non-production preview.',homeTheme=false}=Astro.props;
+const base=import.meta.env.BASE_URL.replace(/\/$/,'');
+const current=(Astro.url.pathname.startsWith(base+'/')?Astro.url.pathname.slice(base.length):Astro.url.pathname).replace(/\/$/,'')||'/';
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex, nofollow"/><meta name="description" content={description}/><meta name="theme-color" content="#ffe000"/><meta property="og:title" content={`${title} | MiBank`}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><title>{title} | MiBank</title><link rel="preload" as="font" href="/assets/manrope-latin.woff2" type="font/woff2" crossorigin/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/></head><body class:list={['site-concept',{'home-cinematic':homeTheme}]}>
+{homeTheme&&<WelcomeIntro/>}
+<noscript><style>.header-search{display:none}@media(max-width:1100px){.site-header{position:static}.site-concept .header-inner{height:auto;flex-wrap:wrap;padding-block:20px}.site-concept #primary-nav{display:block;position:static;max-height:none;width:100%;padding-inline:0}.site-concept .mobile-toggle{display:none}.location-directory .directory-filters{display:none}}</style></noscript><a class="skip-link" href="#main">Skip to content</a>
+<div class="preview-bar">Independent redesign preview <span>— informational only · no banking transactions</span></div>
+<Header current={current}/><SiteSearch/>
+<main id="main" tabindex="-1"><slot/></main>
+<Footer/>
+<script>
+import {initScrollReveals} from '../lib/scroll-reveals';
+const toggle=document.querySelector<HTMLButtonElement>('#mobile-toggle');const nav=document.querySelector<HTMLElement>('#primary-nav');
+toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';toggle.setAttribute('aria-expanded',String(open));nav?.classList.toggle('is-open',open);if(!open)document.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach(d=>d.open=false)});
+document.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach(detail=>detail.addEventListener('toggle',()=>{if(detail.open)document.querySelectorAll<HTMLDetailsElement>('.nav-dropdown').forEach(other=>{if(other!==detail)other.open=false})}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const open=document.querySelector<HTMLDetailsElement>('.nav-dropdown[open]');if(open){open.open=false;open.querySelector<HTMLElement>('summary')?.focus()}else if(toggle?.getAttribute('aria-expanded')==='true'){toggle.click();toggle.focus()}}});
+document.addEventListener('click',e=>{document.querySelectorAll<HTMLDetailsElement>('.nav-dropdown[open]').forEach(d=>{if(!d.contains(e.target as Node))d.open=false})});
+initScrollReveals();
+</script>
+</body></html>

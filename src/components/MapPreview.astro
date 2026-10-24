@@ -1,0 +1,9 @@
+---
+import geography from '../data/map-geography.json';
+import locations from '../data/locations.json';
+const points=(ring:number[][])=>ring.map(([lng,lat],i)=>`${i?'L':'M'}${((lng-140)*32).toFixed(1)},${(-lat*24).toFixed(1)}`).join(' ')+'Z';
+const png=geography.features.filter(feature=>feature.properties.name==='Papua New Guinea');
+const paths=png.flatMap(feature=>{const geometry=feature.geometry as {type:'MultiPolygon';coordinates:number[][][][]}|{type:'Polygon';coordinates:number[][][]};return geometry.type==='MultiPolygon'?geometry.coordinates.flatMap(polygon=>polygon.map(points)):geometry.coordinates.map(points);});
+const branches=locations.filter(l=>l.type==='Branches');
+---
+<svg class="concept-map" viewBox="0 10 540 295" role="img" aria-label="Overview of MiBank branch locations across Papua New Guinea">{paths.map(d=><path d={d} fill="#dfe3db" stroke="#fff" stroke-width="2"/>)}{branches.map(l=><g transform={`translate(${(l.lng-140)*32},${-l.lat*24})`}><circle r="9" fill="#ffe000" opacity=".35"/><circle r="4" fill="#d1ad00" stroke="#fff" stroke-width="1.5"/></g>)}</svg>

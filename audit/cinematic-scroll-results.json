@@ -1,0 +1,416 @@
+{
+  "checks": [
+    {
+      "name": "ScrollTrigger scenes installed 1440",
+      "pass": true
+    },
+    {
+      "name": "Numeric scrub 1.5 1440",
+      "pass": true
+    },
+    {
+      "name": "No hero scroll masks 1440",
+      "pass": true
+    },
+    {
+      "name": "No pin spacers 1440",
+      "pass": true
+    },
+    {
+      "name": "Generous scroll distance 1440",
+      "pass": true
+    },
+    {
+      "name": "Masked scaled translation at quarter progress 1440",
+      "pass": true
+    },
+    {
+      "name": "No opacity fade 1440",
+      "pass": true
+    },
+    {
+      "name": "Holding scroll does not autoplay reveal 1440",
+      "pass": true
+    },
+    {
+      "name": "Scroll advances reveal 1440",
+      "pass": true
+    },
+    {
+      "name": "Cards unfold in staggered sequence 1440",
+      "pass": true
+    },
+    {
+      "name": "Scroll completes reveal 1440",
+      "pass": true
+    },
+    {
+      "name": "Scrolling back reverses unfolding 1440",
+      "pass": true
+    },
+    {
+      "name": "Four aligned concept products 1440",
+      "pass": true
+    },
+    {
+      "name": "Document height unchanged during motion 1440",
+      "pass": true
+    },
+    {
+      "name": "Keyboard reveals focused report immediately 1440",
+      "pass": true
+    },
+    {
+      "name": "Focused content stays accessible 1440",
+      "pass": true
+    },
+    {
+      "name": "Live reduced-motion change removes scenes 1440",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion clears masks 1440",
+      "pass": true
+    },
+    {
+      "name": "No overflow 1440",
+      "pass": true
+    },
+    {
+      "name": "Motion can re-enable cleanly 1440",
+      "pass": true
+    },
+    {
+      "name": "ScrollTrigger scenes installed 768",
+      "pass": true
+    },
+    {
+      "name": "Numeric scrub 1.5 768",
+      "pass": true
+    },
+    {
+      "name": "No hero scroll masks 768",
+      "pass": true
+    },
+    {
+      "name": "No pin spacers 768",
+      "pass": true
+    },
+    {
+      "name": "Generous scroll distance 768",
+      "pass": true
+    },
+    {
+      "name": "Masked scaled translation at quarter progress 768",
+      "pass": true
+    },
+    {
+      "name": "No opacity fade 768",
+      "pass": true
+    },
+    {
+      "name": "Holding scroll does not autoplay reveal 768",
+      "pass": true
+    },
+    {
+      "name": "Scroll advances reveal 768",
+      "pass": true
+    },
+    {
+      "name": "Cards unfold in staggered sequence 768",
+      "pass": true
+    },
+    {
+      "name": "Scroll completes reveal 768",
+      "pass": true
+    },
+    {
+      "name": "Scrolling back reverses unfolding 768",
+      "pass": true
+    },
+    {
+      "name": "Four aligned concept products 768",
+      "pass": true
+    },
+    {
+      "name": "Document height unchanged during motion 768",
+      "pass": true
+    },
+    {
+      "name": "Keyboard reveals focused report immediately 768",
+      "pass": true
+    },
+    {
+      "name": "Focused content stays accessible 768",
+      "pass": true
+    },
+    {
+      "name": "Live reduced-motion change removes scenes 768",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion clears masks 768",
+      "pass": true
+    },
+    {
+      "name": "No overflow 768",
+      "pass": true
+    },
+    {
+      "name": "Motion can re-enable cleanly 768",
+      "pass": true
+    },
+    {
+      "name": "ScrollTrigger scenes installed 390",
+      "pass": true
+    },
+    {
+      "name": "Numeric scrub 1.5 390",
+      "pass": true
+    },
+    {
+      "name": "No hero scroll masks 390",
+      "pass": true
+    },
+    {
+      "name": "No pin spacers 390",
+      "pass": true
+    },
+    {
+      "name": "Generous scroll distance 390",
+      "pass": true
+    },
+    {
+      "name": "Masked scaled translation at quarter progress 390",
+      "pass": true
+    },
+    {
+      "name": "No opacity fade 390",
+      "pass": true
+    },
+    {
+      "name": "Holding scroll does not autoplay reveal 390",
+      "pass": true
+    },
+    {
+      "name": "Scroll advances reveal 390",
+      "pass": true
+    },
+    {
+      "name": "Scroll completes reveal 390",
+      "pass": true
+    },
+    {
+      "name": "Scrolling back reverses unfolding 390",
+      "pass": true
+    },
+    {
+      "name": "Document height unchanged during motion 390",
+      "pass": true
+    },
+    {
+      "name": "Keyboard reveals focused report immediately 390",
+      "pass": true
+    },
+    {
+      "name": "Focused content stays accessible 390",
+      "pass": true
+    },
+    {
+      "name": "Live reduced-motion change removes scenes 390",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion clears masks 390",
+      "pass": true
+    },
+    {
+      "name": "No overflow 390",
+      "pass": true
+    },
+    {
+      "name": "Motion can re-enable cleanly 390",
+      "pass": true
+    },
+    {
+      "name": "Interior product rows have scrub scenes",
+      "pass": true
+    },
+    {
+      "name": "Original report cards have scrub scenes",
+      "pass": true
+    },
+    {
+      "name": "News rows have scrub scenes",
+      "pass": true
+    },
+    {
+      "name": "Media search is outside animated scene",
+      "pass": true
+    },
+    {
+      "name": "Media search still works",
+      "pass": true
+    },
+    {
+      "name": "Search results unmask immediately",
+      "pass": true
+    },
+    {
+      "name": "Media reset preserves all 49 stories",
+      "pass": true
+    },
+    {
+      "name": "Map is excluded from motion",
+      "pass": true
+    },
+    {
+      "name": "Location filters stay static",
+      "pass": true
+    },
+    {
+      "name": "Map popup still works",
+      "pass": true
+    },
+    {
+      "name": "No-JS content has no masks",
+      "pass": true
+    },
+    {
+      "name": "No-JS images remain visible",
+      "pass": true
+    }
+  ],
+  "axe": [
+    {
+      "width": 1440,
+      "mode": "reduced-motion fallback",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "mode": "reduced-motion fallback",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "mode": "reduced-motion fallback",
+      "violations": []
+    }
+  ],
+  "samples": [
+    {
+      "width": 1440,
+      "range": {
+        "start": 48,
+        "end": 606
+      },
+      "first": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      },
+      "held": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      },
+      "middle": {
+        "y": 7.3369,
+        "scale": 0.9976,
+        "clip": "inset(0% 0% 5.104%)",
+        "opacity": "1"
+      },
+      "complete": {
+        "y": 0,
+        "scale": 1,
+        "clip": "inset(0%)",
+        "opacity": "1"
+      },
+      "reversed": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      }
+    },
+    {
+      "width": 768,
+      "range": {
+        "start": 159,
+        "end": 717
+      },
+      "first": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      },
+      "held": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      },
+      "middle": {
+        "y": 7.3369,
+        "scale": 0.9976,
+        "clip": "inset(0% 0% 5.104%)",
+        "opacity": "1"
+      },
+      "complete": {
+        "y": 0,
+        "scale": 1,
+        "clip": "inset(0%)",
+        "opacity": "1"
+      },
+      "reversed": {
+        "y": 29.8423,
+        "scale": 0.9903,
+        "clip": "inset(0% 0% 20.7599%)",
+        "opacity": "1"
+      }
+    },
+    {
+      "width": 390,
+      "range": {
+        "start": 273,
+        "end": 729
+      },
+      "first": {
+        "y": 21,
+        "scale": 0.9888,
+        "clip": "inset(0% 0% 24%)",
+        "opacity": "1"
+      },
+      "held": {
+        "y": 21,
+        "scale": 0.9888,
+        "clip": "inset(0% 0% 24%)",
+        "opacity": "1"
+      },
+      "middle": {
+        "y": 11.1754,
+        "scale": 0.994,
+        "clip": "inset(0% 0% 12.7719%)",
+        "opacity": "1"
+      },
+      "complete": {
+        "y": 0,
+        "scale": 1,
+        "clip": "inset(0%)",
+        "opacity": "1"
+      },
+      "reversed": {
+        "y": 21,
+        "scale": 0.9888,
+        "clip": "inset(0% 0% 24%)",
+        "opacity": "1"
+      }
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

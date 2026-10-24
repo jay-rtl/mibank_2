@@ -1,0 +1,19 @@
+---
+import {asset,products,about} from '../lib/content';
+import Icon from './Icon.astro';
+const {current='/'}=Astro.props;
+const business=products.filter(([name])=>['Business Loan','Fisheries Loan','Farmers Loan'].includes(name));
+const isBusiness=business.some(([,url])=>url===current);
+const personal=products.filter(([name])=>!['Business Loan','Fisheries Loan','Farmers Loan'].includes(name));
+---
+<div class="utility"><div class="shell utility-inner"><span>Banking in Papua New Guinea</span><div><a href="/about/locations">Find a branch</a><a href="/about/contact">Help &amp; contact</a><a href="tel:16789"><Icon name="phone" size={13}/>16789 (DIGICEL)</a></div></div></div>
+<header class="site-header"><div class="shell header-inner"><a href="/" class="logo" aria-label="MiBank home"><img src={asset('nmb_logo.gif')} width="200" height="70" alt="MiBank — Grow with us"/></a><button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="primary-nav"><span>Menu</span><Icon name="menu"/></button>
+<nav id="primary-nav" aria-label="Main navigation">
+ <details class="nav-dropdown"><summary class:list={{active:current.startsWith('/products')&&!isBusiness}}>Personal <Icon name="chevron" size={14}/></summary><div class="dropdown products-dropdown"><div class="dropdown-intro"><span class="eyebrow">Banking for your goals</span><a href="/products">All products <Icon/></a><p>Simple hassle-free banking for everyone</p></div><div class="dropdown-links">{personal.map(([name,url])=><a href={url} aria-current={current===url?'page':undefined}>{name}<span aria-hidden="true">↗</span></a>)}</div></div></details>
+ <details class="nav-dropdown"><summary class:list={{active:isBusiness}}>Business <Icon name="chevron" size={14}/></summary><div class="dropdown about-dropdown">{business.map(([name,url])=><a href={url} aria-current={current===url?'page':undefined}>{name}</a>)}<a href="/about/contact">Talk to MiBank</a></div></details>
+ <a href="/products/micash" aria-current={current==='/products/micash'?'page':undefined}>MiCash</a>
+ <a href="/#milife">MiLife</a>
+ <details class="nav-dropdown"><summary class:list={{active:current.startsWith('/about')}}>About us <Icon name="chevron" size={14}/></summary><div class="dropdown about-dropdown">{about.map(([name,url])=><a href={url} aria-current={current===url?'page':undefined}>{name}</a>)}<a href="/media">News &amp; updates</a></div></details>
+ <a href="/about/contact">Help &amp; contact</a>
+ <a href="/products" class="nav-contact">Get started <Icon size={17}/></a>
+</nav><button type="button" class="header-search" id="open-search" aria-label="Search MiBank" aria-haspopup="dialog" aria-controls="site-search"><Icon name="search" size={20}/></button></div></header>

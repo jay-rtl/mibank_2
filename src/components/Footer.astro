@@ -1,0 +1,12 @@
+---
+import {asset} from '../lib/content';
+import Icon from './Icon.astro';
+const columns=[
+ ['Personal',[['Term Deposits','/products/term-deposits'],['MiPikinini','/products/mipikinini'],['MiLoan','/products/miloan'],['MiCard','/products/micard'],['MiCash','/products/micash']]],
+ ['Business',[['Business Loan','/products/business-loan'],['Fisheries Loan','/products/fisheries-loan'],['Farmers Loan','/products/farmers-loan'],['All products','/products']]],
+ ['About us',[['Our story','/about'],['Our vision & mission','/about/vision-mission'],['Our people','/about/board-of-directors'],['Annual Reports','/about/annual-reports'],['News & updates','/media']]],
+ ['Help & contact',[['Find a branch or agent','/about/locations'],['Contact us','/about/contact'],['Privacy Policy','/about/privacy'],['16789 (DIGICEL)','tel:16789'],['nmbho@mibank.com.pg','mailto:nmbho@mibank.com.pg']]]
+] as [string,[string,string][]][];
+---
+<section class="callout"><div class="shell callout-inner"><div><span class="eyebrow">We're here to help</span><h2>CALL MIBANK TODAY!</h2></div><a href="tel:16789">16789 <span>(DIGICEL)</span><Icon size={26}/></a></div></section>
+<footer><div class="shell"><div class="footer-top"><a class="footer-brand" href="/" aria-label="MiBank home"><img src={asset('nmb_logo.gif')} width="200" height="70" alt="MiBank — Grow with us"/></a><p>Simple hassle-free<br/>banking for everyone</p><a class="footer-location" href="/about/locations"><Icon name="pin"/>Find your nearest MiBank <Icon size={17}/></a></div><div class="footer-grid">{columns.map(([title,links])=><div><span class="footer-heading">{title}</span>{links.map(([name,url])=><a href={url}>{name}</a>)}</div>)}<div class="footer-social"><span class="footer-heading">Follow us</span><a href="https://www.facebook.com/MiBank-PNG-206671296097574/" rel="noopener noreferrer">Facebook ↗</a><a href="https://twitter.com/#!/twestaway" rel="noopener noreferrer">Twitter ↗</a></div></div><div class="footer-bottom"><p>© ALL RIGHTS RESERVED NATIONWIDE MICROBANK (MiBank) LIMITED 2016</p><span>Independent, non-production preview</span></div></div></footer>

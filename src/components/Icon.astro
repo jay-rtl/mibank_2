@@ -1,0 +1,5 @@
+---
+const {name='arrow',size=20}=Astro.props;
+const paths:Record<string,string>={arrow:'M4 12h16m-6-6 6 6-6 6',pin:'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM9 10a3 3 0 1 0 6 0 3 3 0 0 0-6 0',phone:'M7 3H3c-1 10 8 19 18 18v-4l-5-2-2 2-7-7 2-2-2-5Z',chevron:'m6 9 6 6 6-6',play:'m9 5 11 7-11 7V5Z',menu:'M3 6h18M3 12h18M3 18h18',close:'m6 6 12 12M18 6 6 18',download:'M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5',search:'M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',user:'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-3a8 8 0 0 1 16 0v3H4Z',document:'M4 3h12v5M4 3v18h13M7 7h5M7 11h5m-5 4h3m2 3 7-7 3 3-7 7-4 1 1-4Z',mobile:'M7 2h10v20H7V2Zm0 3h10M11 19h2',business:'M4 21V10h5v11M10 21V4h5v17m1 0V8h5v13M2 21h21',savings:'M3 9h18M5 9v10m5-10v10m4-10v10m5-10v10M2 22h20M12 2 2 7h20L12 2Z',home:'m2 11 10-9 10 9M5 9v13h14V9M10 22v-8h4v8',leaf:'M20 3C8 2 2 7 6 15c6 7 14 1 14-12ZM4 21 16 8'};
+---
+<svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={paths[name]||paths.arrow}/></svg>

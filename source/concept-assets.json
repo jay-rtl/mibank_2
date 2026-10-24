@@ -1,0 +1,29 @@
+{
+  "mode": "Built-in imagegen; image edit for hero, new generation for family. Sharp used only for format conversion and responsive resizing.",
+  "originalAssetsPreserved": true,
+  "assets": [
+    {
+      "name": "Community hero",
+      "source": "public/assets/video_mibank_ulip-b119fb24.webp",
+      "master": "public/assets/concept/community-hero-original.png",
+      "outputs": [
+        "community-hero-640.avif",
+        "community-hero-960.avif",
+        "community-hero-1600.avif",
+        "community-hero-1600.webp"
+      ],
+      "promptBrief": "Edit the existing adult Papua New Guinean woman portrait. Preserve her identity, age, face, skin tone and short curly black hair. Place her on the right in a yellow and black botanical blouse with a natural expression. Build a softly blurred Papua New Guinea-inspired mountain and blue-water landscape, with left-side negative space for homepage copy. Natural editorial photography. No text, logo, card or watermark.",
+      "provenance": "AI-edited portrait and illustrative landscape; not evidence of a photographed location or an endorsement."
+    },
+    {
+      "name": "Family inclusion portrait",
+      "master": "public/assets/concept/family-original.png",
+      "outputs": [
+        "family-480.webp",
+        "family-800.webp"
+      ],
+      "promptBrief": "Natural editorial horizontal 4:3 portrait of a fictional Papua New Guinean adult mother, about 35, and her daughter, about 7, smiling together in a lush tropical garden. Mother in a golden yellow blouse; child in a blue shirt. Subjects on the right two-thirds. No logos, text, cards or money.",
+      "provenance": "AI-generated fictional people. An illustrative family portrait, not an identified MiBank customer or testimonial."
+    }
+  ]
+}

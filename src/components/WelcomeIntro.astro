@@ -1,0 +1,36 @@
+---
+import '../styles/welcome.css';
+---
+<dialog class="welcome-intro" data-welcome-intro aria-labelledby="welcome-title" aria-describedby="welcome-description"><div class="welcome-centre"><p class="welcome-title" id="welcome-title"><span class="welcome-greeting">Welcome to</span><span class="welcome-name">MiBank<span class="welcome-dot" aria-hidden="true"></span></span></p><p class="welcome-description" id="welcome-description">Grow with us.</p></div></dialog>
+<script is:inline>
+(() => {
+  const intro = document.querySelector('[data-welcome-intro]');
+  if (!(intro instanceof HTMLDialogElement) || !intro.showModal || location.hash) return;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let holdTimer, exitTimer, safetyTimer, finished = false;
+  const finish = (userInitiated = false) => {
+    if (finished) return;
+    finished = true;
+    clearTimeout(holdTimer); clearTimeout(exitTimer); clearTimeout(safetyTimer);
+    intro.close();
+    document.documentElement.classList.remove('welcome-active');
+    if (userInitiated) document.querySelector('#main')?.focus({preventScroll:true});
+    document.dispatchEvent(new Event('mibank:intro-finished'));
+  };
+  try {
+    intro.showModal();
+    document.documentElement.classList.add('welcome-active');
+    // The page loads underneath. This is a timed welcome, not a fake loading meter.
+    holdTimer = setTimeout(() => {
+      if (reducedMotion.matches) return finish();
+      intro.classList.add('is-leaving');
+      exitTimer = setTimeout(() => finish(), 800);
+    }, reducedMotion.matches ? 900 : 2200);
+    safetyTimer = setTimeout(() => finish(), 4000);
+    intro.addEventListener('cancel', event => {event.preventDefault(); finish(true);});
+    reducedMotion.addEventListener('change', event => {if(event.matches) finish();}, {once:true});
+  } catch {
+    finish();
+  }
+})();
+</script>

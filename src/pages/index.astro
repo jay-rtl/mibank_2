@@ -1,0 +1,41 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import HomeSlideshow from '../components/HomeSlideshow.astro';
+import MapPreview from '../components/MapPreview.astro';
+import {asset,products,pages} from '../lib/content';
+import {parseMedia} from '../lib/media';
+import {load} from 'cheerio';
+import '../styles/home.css';
+const home=pages.find(p=>p.route==='/')!;
+const $=load(home.html);
+const intro=$('p').filter((_,el)=>$(el).text().startsWith('MiBank delivers')).first().text();
+const featured=[
+ {name:'Term Deposits',caption:'Make room for tomorrow',url:'/products/term-deposits',image:'video_mibank_hibicus.jpg',icon:'savings',description:'Explore a place for your longer-term savings.'},
+ {name:'Business Loans',caption:'Back your next step',url:'/products/business-loan',image:'Sola PayGo_08-24.jpg',icon:'business',description:'Find out about finance for your business.'},
+ {name:'MiLoan',caption:'Your goals, within reach',url:'/products/miloan',image:'video_mibank_ulip.jpg',icon:'home',description:'Explore personal borrowing with MiBank.'},
+ {name:'MiCash',caption:'Banking on your mobile',url:'/products/micash',image:'video_mibank_agent.jpg',icon:'mobile',description:'Discover mobile money and the MiCash app.'}
+];
+const quick=[['user','Open an account','Start your banking journey','/about/contact'],['document','Apply for a loan','Explore your borrowing options','/products'],['pin','Find a branch or agent','Find MiBank near you','/about/locations'],['mobile','MiCash','Explore mobile banking','/products/micash']];
+const videos=[['MiBank - Agent','/media/micash-agent','video_mibank_agent.jpg'],['MiBank - ULIP','/media/ulip','video_mibank_ulip.jpg'],['MiBank - Hibicus Card','/media/hibiscus','video_mibank_hibicus.jpg']];
+const reportSource=load(pages.find(p=>p.route==='/about/annual-reports')!.html);
+const reports=reportSource('img').toArray().filter(img=>reportSource(img).attr('alt')?.startsWith('Financial Statements')).map(img=>({title:reportSource(img).attr('alt')!,image:reportSource(img).attr('src')!,url:reportSource(img).closest('a').attr('href')!})).slice(0,3);
+const news=parseMedia(pages.find(p=>p.route==='/media')!.html).items.slice(0,3);
+---
+<Layout homeTheme title="Banking in Papua New Guinea" description="Explore MiBank products, mobile banking, branches and community stories in Papua New Guinea. Independent informational redesign preview.">
+ <HomeSlideshow/>
+ <nav class="concept-quick-actions shell" aria-label="Quick actions">{quick.map(([icon,title,description,url])=><a href={url}><Icon name={icon} size={30}/><span><strong>{title}</strong><small>{description}</small></span><Icon size={16}/></a>)}</nav>
+ <section class="cinema-mission cinema-section shell" aria-labelledby="mission-title">
+  <span class="cinema-kicker">Our products</span><h2 id="mission-title">Solutions for your goals</h2><p class="mission-statement">From everyday banking to business lending and mobile money. Find the MiBank product for your next step.</p><a class="cinema-link" href="/products">View all products <Icon size={17}/></a>
+  <div class="cinema-products">{featured.map(item=><a class="cinema-product" href={item.url}><div class="cinema-product-art"><img src={asset(item.image)} width="640" height="410" loading="lazy" alt=""/></div><span class="concept-product-icon" aria-hidden="true"><Icon name={item.icon}/></span><h3>{item.name}</h3><p>{item.description}</p><span class="cinema-product-cta">Learn more <Icon size={16}/></span></a>)}</div>
+ </section>
+ <section class="concept-community shell" id="milife" aria-label="Financial inclusion and locations">
+  <div class="cinema-hibiscus-inner"><div class="concept-inclusion-copy"><span class="cinema-kicker"><Icon name="leaf" size={26}/> MiLife</span><h2>Supporting women, families and communities.</h2><p>Learn about MiBank's commitment to financial inclusion and its vision for Papua New Guinea.</p><a class="cinema-button" href="/about/vision-mission">Our vision &amp; mission <Icon size={16}/></a></div><div class="cinema-hibiscus-art"><img src="/assets/concept/family-800.webp" srcset="/assets/concept/family-480.webp 480w, /assets/concept/family-800.webp 800w" sizes="(max-width:600px) 100vw, 35vw" width="800" height="600" loading="lazy" alt="Mother and daughter in a tropical garden, an illustrative family portrait"/></div></div>
+  <div class="concept-locator"><h2>Find a branch or agent near you</h2><MapPreview/><p>Explore our branch and agent network across Papua New Guinea.</p><a class="cinema-button" href="/about/locations">Search now <Icon size={16}/></a></div>
+ </section>
+ <section class="concept-news cinema-section shell" aria-labelledby="news-title"><div class="cinema-section-heading"><div><span class="cinema-kicker">News &amp; updates</span><h2 id="news-title">Latest from MiBank</h2></div><a class="cinema-link" href="/media">View all news <Icon size={16}/></a></div><div class="concept-news-grid">{news.map(item=><article class="concept-news-card">{item.image&&<a class="concept-news-photo" href={item.href} tabindex="-1" aria-hidden="true"><img src={item.image.src} width="380" height="285" loading="lazy" alt=""/></a>}<div class="news-original" set:html={item.html}/></article>)}</div></section>
+ <section class="cinema-story cinema-section" aria-labelledby="story-title"><div class="shell cinema-story-grid"><div class="cinema-story-image"><img src={asset('Umi market_10-24.jpg')} width="1024" height="768" loading="lazy" alt="MiBank community gathering at Umi market"/></div><div class="cinema-story-copy"><span class="cinema-kicker">Grow with us</span><h2 id="story-title">Rooted in Papua New Guinea.</h2><p>{intro}</p><a class="cinema-link" href="/about">About MiBank <Icon size={17}/></a></div></div></section>
+ <section class="cinema-reports cinema-section shell" aria-labelledby="reports-title"><div class="cinema-section-heading"><div><span class="cinema-kicker">Shareholder information</span><h2 id="reports-title">Our Annual Reports</h2></div><a class="cinema-link" href="/about/annual-reports">All reports <Icon size={17}/></a></div><div class="cinema-report-grid">{reports.map(report=><a href={report.url} class="cinema-report"><div class="cinema-report-cover"><img src={report.image} width="522" height="460" loading="lazy" alt=""/></div><div><h3>{report.title}</h3><span>Download PDF <Icon name="download" size={17}/></span></div></a>)}</div></section>
+ <section class="cinema-films cinema-section shell" aria-labelledby="films-title"><div class="cinema-section-heading"><div><span class="cinema-kicker">Stories from MiBank</span><h2 id="films-title">MiBank Feature Videos</h2></div><a class="cinema-link" href="/media">Media <Icon size={17}/></a></div><div class="cinema-film-grid">{videos.map(([name,url,image])=><a class="cinema-film" href={url}><div class="cinema-film-photo"><img src={asset(image)} width="640" height="410" loading="lazy" alt=""/><span class="cinema-play"><Icon name="play"/></span></div><h3>{name}<Icon size={18}/></h3></a>)}</div><a href="/media/michoice" class="cinema-choice"><img src={asset('products_michoice.jpg')} width="90" height="90" loading="lazy" alt="Get a MiCard or MiCash on your mobile"/><span>MiBank Choice</span><Icon/></a></section>
+ <section class="cinema-product-directory shell"><span class="cinema-kicker">Explore MiBank Products</span><div>{products.map(([name,url])=><a href={url}>{name}<Icon size={14}/></a>)}</div></section>
+</Layout>
